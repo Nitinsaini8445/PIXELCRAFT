@@ -1,0 +1,36 @@
+from django.urls import path
+from app.views import (
+    IndexView,
+    AboutView,
+    ServiceView,
+    SingleServicesView,
+    CaseStudiesView,
+    TeamView,
+    PartnershipView,
+    PricingView,
+    TestimonialView,
+    FaqView,
+    BlogView,
+    SinglePostView,
+    ContactView,
+    SearchView,
+    X404PageView,
+)
+
+urlpatterns = [
+    path("", IndexView.as_view(), name="index"),
+    path("about/", AboutView.as_view(), name="about"),
+    path("service/", ServiceView.as_view(), name="service"),
+    path("single_services/", SingleServicesView.as_view(), name="single_services"),
+    path("case_studies/", CaseStudiesView.as_view(), name="case_studies"),
+    path("team/", TeamView.as_view(), name="team"),
+    path("partnership/", PartnershipView.as_view(), name="partnership"),
+    path("pricing/", PricingView.as_view(), name="pricing"),
+    path("testimonial/", TestimonialView.as_view(), name="testimonial"),
+    path("faq/", FaqView.as_view(), name="faq"),
+    path("blog/", BlogView.as_view(), name="blog"),
+    path("single_post/", SinglePostView.as_view(), name="single_post"),
+    path("search/", SearchView.as_view(), name="search"),
+    path("contact/", ContactView.as_view(), name="contact"),
+    path("404/", X404PageView.as_view(), name="404_page"),
+]

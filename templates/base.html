@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Marko - Digital Marketing Agency{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'image/favicon.ico' %}">
+    
+    <!-- Theme Initialization Script (Must be in head to prevent FOUC) -->
+    <script>
+        (function() {
+            if (localStorage.getItem('lightmode') === 'active') {
+                document.documentElement.classList.add('lightmode');
+                document.body?.classList.add('lightmode'); // Fallback if body exists
+            }
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Section Header -->
+    <header>
+        <!-- Section Navbar -->
+        <div id="header">{% include "header.html" %}</div>
+    </header>
+
+    <!-- Section Content Edit -->
+    <aside>
+        <div id="edit-sidebar">{% include "sidebar.html" %}</div>
+    </aside>
+
+    <!-- Section Search -->
+    <aside>
+        <div id="search-form-container">{% include "search-form.html" %}</div>
+    </aside>
+
+    <!-- Section Sidebar -->
+    <aside>
+        <div id="sidebar">{% include "sidebar.html" %}</div>
+    </aside>
+
+    <!-- Section Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Section Footer -->
+    <footer>
+        <div id="footer">{% include "footer.html" %}</div>
+    </footer>
+
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/vendor/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/swiper-script.js' %}"></script>
+    <script src="{% static 'js/submit-form.js' %}"></script>
+    <script src="{% static 'js/video_embedded.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
