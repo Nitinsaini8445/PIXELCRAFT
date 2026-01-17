@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - Marko - Digital Marketing Agency{% endblock %}
+
+{% block content %}
+<div class="section-banner">
+    <div class="banner-layout-wrapper">
+        <div class="banner-layout">
+            <div class="d-flex flex-column text-center align-items-center gspace-2">
+                <h2 class="title-heading animate-box animated animate__animated" data-animate="animate__fadeInRight">
+                    Privacy Policy
+                </h2>
+                <nav class="breadcrumb">
+                    <a href="{% url 'index' %}" class="gspace-2">Home</a>
+                    <span class="separator-link">/</span>
+                    <p class="current-page">Privacy Policy</p>
+                </nav>
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="hero-container">
+        <div class="d-flex flex-column gspace-5">
+            <div class="row row-cols-xl-2 row-cols-1 grid-spacer-5 m-0">
+                <div class="col col-xl-8 ps-0 pe-0">
+
+                    <h3>Privacy Policy</h3>
+                    <p><strong>Last updated:</strong></p>
+
+                    <p>
+                        At <strong>Bitriots</strong>, we respect your privacy and are committed
+                        to protecting your personal information.
+                    </p>
+
+                    <h4>1. Information We Collect</h4>
+                    <p>We may collect basic information such as:</p>
+                    <ul>
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Phone number</li>
+                        <li>Any details you submit through contact forms</li>
+                    </ul>
+
+                    <h4>2. How We Use Your Information</h4>
+                    <p>We use your information to:</p>
+                    <ul>
+                        <li>Respond to inquiries</li>
+                        <li>Provide our services</li>
+                        <li>Improve our website and user experience</li>
+                    </ul>
+
+                    <h4>3. Cookies</h4>
+                    <p>
+                        Our website may use cookies to improve functionality and performance.
+                        You can disable cookies from your browser settings if you prefer.
+                    </p>
+
+                    <h4>4. Data Protection</h4>
+                    <p>
+                        We take reasonable steps to protect your personal data.
+                        However, no online transmission is 100% secure.
+                    </p>
+
+                    <h4>5. Sharing of Information</h4>
+                    <p>
+                        We do not sell or share your personal information with third parties,
+                        except when required by law.
+                    </p>
+
+                    <h4>6. Your Consent</h4>
+                    <p>
+                        By using our website, you consent to our Privacy Policy.
+                    </p>
+
+                    <h4>7. Changes to Privacy Policy</h4>
+                    <p>
+                        We may update this policy from time to time.
+                        Any changes will be posted on this page.
+                    </p>
+
+                    <h4>8. Contact Us</h4>
+                    <p>
+                        If you have questions about this Privacy Policy, contact us at:<br>
+                        <strong>Email:</strong> Officialbitriots@gmail.com
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

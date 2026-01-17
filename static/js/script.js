@@ -20,13 +20,15 @@ function initBannerVideo() {
 
     window.onYouTubeIframeAPIReady = function () {
         player = new YT.Player('banner-video-background', {
-            videoId: 'P68V3iH4TeE',
+            // YAHAN NEW ID DALI HAI
+            videoId: 'jm1ZNOKQx9U', 
             playerVars: {
                 'autoplay': 1,
                 'controls': 0,
                 'mute': 1,
                 'loop': 1,
-                'playlist': 'P68V3iH4TeE',
+                // LOOP KE LIYE YAHAN BHI NEW ID ZAROORI HAI
+                'playlist': 'jm1ZNOKQx9U', 
                 'showinfo': 0,
                 'rel': 0,
                 'enablejsapi': 1,
@@ -71,23 +73,22 @@ function initBannerVideo() {
 
         if (player && player.getIframe) {
             var $iframe = $(player.getIframe());
-            $iframe.width(newWidth).height(newHeight);
+            $iframe.css({
+                width: newWidth,
+                height: newHeight,
+                marginLeft: (containerWidth - newWidth) / 2,
+                marginTop: (containerHeight - newHeight) / 2,
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)'
+            });
         }
     }
-
-    function handleYouTubeErrors() {
-        window.addEventListener('message', function (event) {
-            if (event.origin !== 'https://www.youtube.com') return;
-
-            try {
-                var data = JSON.parse(event.data);
-
-            } catch (e) {
-
-            }
-        });
-    }
 }
+
+// Function ko call karna na bhoolein
+initBannerVideo();
 
 function initThemeSwitch() {
     let lightMode = false;
@@ -105,7 +106,7 @@ function initThemeSwitch() {
             $('html, body').addClass('lightmode');
             localStorage.setItem('lightmode', 'active');
 
-            siteLogos.attr('src', '/static/image/marko-logo-dark.png');
+            siteLogos.attr('src', '/static/image/logo.png');
 
             partnerLogos.each(function () {
                 const $img = $(this);
@@ -118,12 +119,12 @@ function initThemeSwitch() {
             $('html, body').removeClass('lightmode');
             localStorage.removeItem('lightmode');
 
-            siteLogos.attr('src', '/static/image/marko-logo.png');
+            siteLogos.attr('src', '/static/image/logo.png');
 
             partnerLogos.each(function () {
                 const $img = $(this);
                 const src = $img.attr('src');
-                $img.attr('src', src.replace('-dark.png', '.png'));
+                $img.attr('src', src.replace('-dark.png', 'logo.png'));
             });
         }
     };

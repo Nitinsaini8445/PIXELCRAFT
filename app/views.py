@@ -89,6 +89,16 @@ class SearchView(View):
         return render(request, "search.html")
 
 
+class TermView(View):
+    def get(self, request):
+        return render(request, "TermsofService.html")
+
+
+class PrivicyPolicyView(View):
+    def get(self, request):
+        return render(request, "privicypolicy.html")
+
+
 class X404PageView(View):
     def get(self, request):
         return render(request, "404_page.html")

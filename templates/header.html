@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-xl">
         <div class="navbar-container">
             <div class="logo-container">
-                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'image/marko-logo.png' %}" class="site-logo img-fluid"></a>
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'image/logo.png' %}" class="site-logo img-fluid"></a>
             </div>
             <button class="navbar-toggler nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,40 +17,24 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Services <i class="fa-solid fa-angle-down accent-color"></i>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'service' %}"  >
+                            Services 
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'service' %}">Service</a></li>
-                            <li><a class="dropdown-item" href="{% url 'single_services' %}">Single Services</a></li>
-                        </ul>
+                       
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Pages <i class="fa-solid fa-angle-down accent-color"></i>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}" >
+                            Our Team 
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'case_studies' %}">Case Studies</a></li>
-                            <li><a class="dropdown-item" href="{% url 'team' %}">Our Team</a></li>
-                            <li><a class="dropdown-item" href="{% url 'partnership' %}">Partnership</a></li>
-                            <li><a class="dropdown-item" href="{% url 'pricing' %}">Princing Plan</a></li>
-                            <li><a class="dropdown-item" href="{% url 'testimonial' %}">Testimonial</a></li>
-                            <li><a class="dropdown-item" href="{% url 'faq' %}">FAQs</a></li>
-                            <li><a class="dropdown-item" href="{% url '404_page' %}">Error 404</a></li>
-                        </ul>
+                       
+                       
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Archive <i class="fa-solid fa-angle-down accent-color"></i>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{% url 'blog' %}" >
+                           Blogs
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url 'blog' %}">Blog</a></li>
-                            <li><a class="dropdown-item" href="{% url 'single_post' %}">Single Post</a></li>
-                        </ul>
+        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
@@ -67,7 +51,7 @@
                     <div class="icon-circle">
                         <i class="fa-solid fa-phone-volume"></i>
                     </div>
-                    <h6>+1 (62) 987 7543</h6>
+                    <h6>+91 8679210967</h6>
                 </div>
             </div>
         </div>

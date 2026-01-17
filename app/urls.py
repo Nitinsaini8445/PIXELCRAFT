@@ -15,6 +15,8 @@ from app.views import (
     ContactView,
     SearchView,
     X404PageView,
+    PrivicyPolicyView,
+    TermView
 )
 
 urlpatterns = [
@@ -33,4 +35,6 @@ urlpatterns = [
     path("search/", SearchView.as_view(), name="search"),
     path("contact/", ContactView.as_view(), name="contact"),
     path("404/", X404PageView.as_view(), name="404_page"),
+    path("privicy_policy/", PrivicyPolicyView.as_view(), name="policy"),
+    path("term/", TermView.as_view(), name="term")
 ]
