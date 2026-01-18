@@ -106,7 +106,7 @@ function initThemeSwitch() {
             $('html, body').addClass('lightmode');
             localStorage.setItem('lightmode', 'active');
 
-            siteLogos.attr('src', '/static/image/logo.png');
+            siteLogos.attr('src', '/static/image/bitlogo.png');
 
             partnerLogos.each(function () {
                 const $img = $(this);

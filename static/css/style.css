@@ -1,100 +1,3 @@
-/* ======================================================================== */
-/* Marko HTML5 Template */
-/* ======================================================================== */
-
-/* ================== Table Of Content ================== */
-
-/*
-01. Import Vendor
-02. Root Variables
-    2.1 Colors Variables
-    2.2 Font Weight Variables
-    2.3 Font Size Variables
-    2.4 Line Height Variables
-03. Keyframes Animations
-04. Base Styles
-05. Global Layout Styles
-06. Accent Color
-07. Form Layout Components
-    7.1 Form Layout
-    7.2 Validation Styles
-08. Navbar
-09. Sidebar
-10. Content Edit Sidebar
-11. Newsletter Form
-12. Button
-13. Banner Video Container
-14. Banner Components
-    14.1 Banner Layout
-    14.2 Banner Layout 404
-15. Footer
-16. Digital Process
-17. Heading Components
-    17.1 Title Heading
-    17.2 Navbar Action Component
-    17.3 Testimonial Reviewer
-    17.4 Avatar Container
-18. Sidebar Overlay
-19. Content Sidebar Overlay
-20. Custom Spacer Components
-21. Text Components
-    21.1 Text 404
-22. Search Components
-    22.1 Search Button
-23. Card Components
-24. About Components
-25. Expertise Components
-26. Partner Components
-27. Partnership Components
-28. Service Components
-29. Case Studies Components
-30. Team Components
-31. Contact Components
-32. Blog Components
-33. Pricing Components
-34. Core Benefits
-35. Guide Components
-36. Underline Components
-37. Social Team Components
-38. Testimonial Components
-39. Newsletter Components
-40. Breadcrumb Components
-41. Icon Components
-    41.1 Icon Components
-    41.2 Stars
-    41.3 Social Icons Components
-    41.4 Social Container
-    41.5 Social Footer Container
-42. Counter Text
-43. Service List
-44. Link Wrapper
-45. Choose Us Components
-46. Image Container Components
-47. Request Loader
-48. Modal Components
-49. Detail List
-50. Accordion Components
-51. Maps Components
-52. Single Service Components
-53. CTA Service Banner Components
-54. Animate Components
-55. CustomText Container Components
-56. Footer Components
-    56.1 Footer Layout
-    56.2 Footer List
-    56.3 Contact List
-    56.4 Footer Logo Container
-    56.5 Footer Quick Links
-    56.6 Footer Services Container
-    56.7 Footer Contact Container
-    56.8 Copyright Container
-    56.9 Legal Link
-    56.10 Footer Spacer
-57. Media Queries
-    57.1 Tablet Responsive
-    57.2 Mobile Responsive
-*/
-
 /* ================== 01. Import Vendor ================== */
 
 @import url('../css/vendor/font-family-plus-jakarta-sans.css');
@@ -185,7 +88,7 @@
     --text-color: #4A4A4A;
     --accent-color: #50bd0e;
     --accent-color-2: #000000;
-    --accent-color-3: #e3caff; 
+    --accent-color-3: #00000062; 
     --accent-color-4: #f5f5f5;
     --accent-color-5: #FFFFFF7D;
     --accent-color-6: #50bd0e;
@@ -274,12 +177,12 @@ body.lightmode .keep-dark {
     --primary: #D1D1D1;
     --secondary: #040404;
     --text-color: #8B8B8B;
-    --accent-color: #C82AEF; 
+    --accent-color: #50bd0e; 
     --accent-color-2: #FFFFFF;
     --accent-color-3: #1F1F1F;
     --accent-color-4: #0E0E0E;
     --accent-color-5: #0404047D;
-    --accent-color-6: #C82AEF85;
+    --accent-color-6: #50bd0e;
     --accent-color-7: #FFFFFF8C;
     --star-color: #EFBC2A;
     --error-color: #e63946;
@@ -2036,6 +1939,7 @@ body.lightmode .navbar-icon-wrapper{
     padding: 0px 20px 20px 0px;
     background-color: var(--secondary);
     border-radius: 0px 0px 30px 0px;
+    display: none;
 }
 
 .card-expertise{
@@ -2184,7 +2088,7 @@ body.lightmode .card-partner{
 .partner-slide h5 {
     margin: 0;
     white-space: nowrap;      /* Text ko ek line mein rakhega */
-    font-size: 1.1rem;        /* Font size fix karein */
+    font-size: 1.9rem;        /* Font size fix karein */
     overflow: hidden;
     text-overflow: ellipsis;  /* Agar text bahut bada ho to "..." dikhayega */
 }
@@ -2838,7 +2742,7 @@ body.lightmode .case-studies-content::before{
 
 .blog-image img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     display: flex;
 }
@@ -3161,9 +3065,7 @@ body.lightmode .case-studies-content::before{
     z-index: 0;
 }
 
-body.lightmode .guide-banner::before {
-    background-image: linear-gradient(180deg, var(--accent-color-7) 0%, var(--accent-color-3) 100%);
-}
+
 
 .guide-content{
     position: relative;
@@ -4631,6 +4533,8 @@ body.lightmode .cta-service-banner::before{
         font-size: var(--font-size-sm);
     }
     .navbar{
+
+
         position: relative;
     }
     .navbar-collapse{
@@ -4758,7 +4662,7 @@ body.lightmode .cta-service-banner::before{
         width: 85%;
     }
     .guide-banner{
-        padding: 250px 30px 30px 30px;
+        padding: 30px 30px 30px 30px;
     }
     .guide-content{
         max-width: 100%;
@@ -5269,5 +5173,10 @@ body.lightmode .cta-service-banner::before{
     .copyright,
     .legal-link{
         font-size: var(--font-size-xs);
+    }
+}
+@media  screen and (max-width:425px) {
+    .mobile-head{
+        font-size: 32px;
     }
 }
