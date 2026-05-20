@@ -3293,6 +3293,15 @@ body.lightmode .card-testimonial-header-title{
     background-color: var(--accent-color-4);
 }
 
+#banner-video-background1::-webkit-media-controls {
+    display: none !important;
+}
+
+#banner-video-background1::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+
 .card-testimonial{
     display: flex;
     flex-direction: column;
@@ -3302,6 +3311,7 @@ body.lightmode .card-testimonial-header-title{
     background-image: radial-gradient(at bottom right, var(--accent-color-3) 0%, var(--accent-color-4) 50%);
     padding: 30px 30px 30px 30px;
     border: 1px solid var(--accent-color-3);
+    min-height: 380px;
 }
 
 .profile-name{
